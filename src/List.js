@@ -1,5 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { increment } from './reducers/count.action';
+import { increment100, decrement100 } from './reducers/count100.action';
 
 const List = (props) => {
 	return (
@@ -19,10 +21,10 @@ const mapStateToProps = (state) => {
 const mapDispatchProps = (dispatch) => {
 	return {
 		increment : () => {
-			dispatch({ type: 'INC' });
-			dispatch({ type: 'INC100' });
+			dispatch(increment());
+			dispatch(increment100());
 		},
-		decrement : () => dispatch({ type: 'DEC' })
+		decrement : () => dispatch(decrement100())
 	};
 };
 export default connect(mapStateToProps, mapDispatchProps)(List);

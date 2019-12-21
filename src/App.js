@@ -6,9 +6,7 @@ function App (props){
 	return (
 		<div className='App'>
 			<h1>1 is : {props.count}</h1>
-			<h1>
-				{props.count100} is : {props.count100}
-			</h1>
+			<h1>100 is : {props.count100}</h1>
 			<List />
 		</div>
 	);
